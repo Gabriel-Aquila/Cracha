@@ -1,0 +1,84 @@
+<!-- 
+  HTML- HyperText Marchup Laguage
+  HiperTexto/ Texto com links
+  Marchups/ Marcações
+  Language/ Linguagem
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Cartão de visita</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="avatar">
+         <span> <img src="images/build.png" alt="Selo" /> 
+        </span>
+          <img src="images/avatar.png" alt="Foto Pessoal" />
+        </div>
+    
+     <h1 id="userName">Gabriel Aquila</h1>
+     <a href="https://github.com/Gabriel-Aquila" target="blank"> <img src="images/github.svg" alt="icone github" /> </a>
+      <p>An Web Developer</p>
+
+      <ul id="socialLinks">
+        <li class="facebook">
+          <a href="https://facebook.com" alt="Icone" target="blank"
+            ><img src="images/facebook.svg"
+          /></a>
+        </li>
+
+        <li class="instagram">
+          <a href="https://instagram.com/" alt="Icone" target="blank"
+            ><img src="images/instagram.svg"
+          /></a>
+        </li>
+
+        <li class="twitter">
+          <a href="https://twitter.com" alt="Icone" target="blank"
+            ><img src="images/twitter.svg"
+          /></a>
+        </li>
+      </ul>
+    </main>
+
+    <script>
+
+      const LinksSocialMedia = {
+        github: "Gabrel-Aquila",
+        facebook: "gabriel.aquila.75",
+        instagram:"ogabriel.aquila",
+        twitter: ""
+      }
+
+      function changeSocialMediaLinks() {
+
+        for (let li of socialLinks.children){
+         const social =li.getAttribute('class')
+        
+         li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+         //alert(li.children[0].href)
+        }
+      }
+      changeSocialMediaLinks()
+
+
+     </script>
+
+
+  </body>
+</html>
