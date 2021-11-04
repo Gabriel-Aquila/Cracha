@@ -17,7 +17,7 @@ body {
 }
 
 main {
-  background: url(images/background.png);
+  background: url(images/background.svg);
   width: 375px;
   height: 812px;
 }
@@ -84,4 +84,8 @@ ul {
   gap: 0.5rem;
 
   justify-content: center;
+}
+
+span {
+  color: rgb(97, 93, 94);
 }

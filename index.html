@@ -25,14 +25,25 @@
     <main>
       <div class="container">
         <div class="avatar">
-         <span> <img src="images/build.png" alt="Selo" /> 
+         <span>
+            <img src="images/build.svg" alt="Selo" /> 
         </span>
-          <img src="images/avatar.png" alt="Foto Pessoal" />
+        <img
+        src="https://lorempixel.com/185/185/people/"
+        alt="Foto pessoal"
+        id="userImage"
+      />
         </div>
     
      <h1 id="userName">Gabriel Aquila</h1>
-     <a href="https://github.com/Gabriel-Aquila" target="blank"> <img src="images/github.svg" alt="icone github" /> </a>
-      <p>An Web Developer</p>
+
+     <a id="userLink" href="https://github.com/Gabriel-Aquila" target="blank"
+     > <img src="images/github.svg" alt="icone github" />
+      <span id="userLogin">Gabriel-Aquila</span> </a>
+
+      <p id="userBio">
+        Developer and student
+      </p>
 
       <ul id="socialLinks">
         <li class="facebook">
@@ -55,29 +66,7 @@
       </ul>
     </main>
 
-    <script>
-
-      const LinksSocialMedia = {
-        github: "Gabrel-Aquila",
-        facebook: "gabriel.aquila.75",
-        instagram:"ogabriel.aquila",
-        twitter: ""
-      }
-
-      function changeSocialMediaLinks() {
-
-        for (let li of socialLinks.children){
-         const social =li.getAttribute('class')
-        
-         li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-         //alert(li.children[0].href)
-        }
-      }
-      changeSocialMediaLinks()
-
-
-     </script>
+    <script src="main.js"></script>
 
 
   </body>
